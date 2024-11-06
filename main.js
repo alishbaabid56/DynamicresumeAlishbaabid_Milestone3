@@ -33,12 +33,17 @@ function generateResume() {
                     <div class="sidebar">
                         <img src="${profileImageURL}" alt="Profile Picture" class="profile-img">
                        
-                        
+                        <h2>${name}</h2>
+                     <p><strong>${profession}</strong></p>
+
+                            <h3>About</h3>
+                        <p>${about.replace(/\n/g, "<br>")}</p>
+
                         <h3>Contact</h3>
                          <p><i class="fas fa-phone"></i> ${phone}</p>
                         <p><i class="fas fa-envelope"></i> ${email}</p>
                         <p><i class="fas fa-map-marker-alt"></i> ${address}</p>
-                        
+
                         <h3>Education</h3>
                         <p>${education.replace(/\n/g, "<br>")}</p>
 
@@ -46,8 +51,9 @@ function generateResume() {
                         <ul>${skills.map(skill => `<li>${skill.trim()}</li>`).join('')}</ul>
                     </div>
                     <div class="main-content">
-                    <h2>${name}</h2>
-                     <p><strong>${profession}</strong></p>
+
+               
+                    
                         <h3>Experience</h3>
                         <p>${experience.replace(/\n/g, "<br>")}</p>
                     
@@ -55,8 +61,7 @@ function generateResume() {
                         <h3>Languages</h3>
                        <ul>${languages.map(languages => `<li>${languages.trim()}</li>`).join('')}</ul>
                   
-                        <h3>About</h3>
-                        <p>${about.replace(/\n/g, "<br>")}</p>
+                        
                     </div>
                 </div>
             `;
